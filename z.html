@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>إدارة شات سوريا توب للجوال</title>
+<meta property="og:description" content="شات سوريا توب للجوال">
+<meta property="og:image" content="https://up6.cc/2026/03/177374065193781.gif">
+
+<link rel="icon" href="https://up6.cc/2026/03/177374065193781.gif">
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+--bg:#0a0a0a;
+--card:#121212;
+--gold:#ffd700;
+--text:#f5f5f5;
+--shadow:0 4px 14px rgba(255,215,0,.25);
+}
+
+body.light{
+--bg:#ffffff;
+--card:#f2f2f2;
+--gold:#d4af37;
+--text:#222;
+--shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:'Tajawal',sans-serif;
+line-height:1.8;
+padding:18px;
+transition:.4s;
+}
+
+/* Logo */
+.logo{
+width:300px;
+max-width:100%;
+height:auto;
+border-radius:12px;
+border:3px solid var(--gold);
+display:block;
+margin:0 auto 20px;
+animation:float 6s ease-in-out infinite, glowLogo 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-6px)}
+}
+
+@keyframes glowLogo{
+0%{box-shadow:0 0 6px var(--gold)}
+50%{box-shadow:0 0 20px var(--gold)}
+100%{box-shadow:0 0 6px var(--gold)}
+}
+
+/* Title */
+h1{
+text-align:center;
+color:var(--gold);
+margin-bottom:20px;
+font-size:28px;
+}
+
+/* Navigation */
+.nav-icons{
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
+margin:20px 0 30px;
+}
+
+.nav-icons a{
+background:var(--card);
+padding:10px 20px;
+border-radius:999px;
+color:var(--gold);
+font-weight:700;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:6px;
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+.nav-icons a:hover{
+transform:translateY(-4px);
+box-shadow:0 0 10px var(--gold);
+}
+
+/* إدارة */
+.admin{
+background:var(--card);
+padding:25px 22px;
+border-radius:14px;
+box-shadow:var(--shadow);
+max-width:500px;
+margin:auto;
+text-align:right;
+}
+
+.admin h2{
+color:var(--gold);
+margin-bottom:14px;
+font-size:22px;
+text-align:center;
+}
+
+/* عنصر المعلومات المخفية */
+.hidden-info {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 5px;
+  padding: 0 12px;
+  background: rgba(255,215,0,0.1);
+  color: var(--gold);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+}
+
+/* عند ظهور المعلومات */
+.hidden-info.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  box-shadow: 0 0 15px var(--gold);
+  background: rgba(255,215,0,0.15);
+  max-height: 800px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  overflow-y: auto;
+}
+
+/* أزرار التبديل */
+.toggle-btn{
+cursor:pointer;
+color:var(--gold);
+font-weight:700;
+transition:0.3s;
+display:inline-block;
+margin-bottom:5px;
+user-select:none;
+}
+
+.toggle-btn:hover{
+color:#fff;
+}
+
+/* منع تغير اللون عند الضغط */
+.toggle-btn:active{
+color:var(--gold);
+}
+
+/* Footer */
+footer{
+text-align:center;
+margin-top:30px;
+font-size:14px;
+color:var(--gold);
+}
+
+/* Buttons */
+.theme-btn,.music-btn{
+position:fixed;
+width:46px;
+height:46px;
+border:none;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+z-index:1000;
+}
+
+.theme-btn{top:18px;right:18px;background:var(--gold);color:#000;}
+.music-btn{bottom:18px;left:18px;background:var(--gold);color:#000;}
+</style>
+</head>
+
+<body class="light">
+
+<button class="theme-btn" id="themeToggle"><i class="fas fa-moon"></i></button>
+
+<audio id="bgMusic" autoplay loop muted preload="auto"
+src="https://www.matb3aa.com/music/Abeer-Nehme/Men.Baadak-Abeer.Nehme-MaTb3aa.Com.mp3"></audio>
+
+<button class="music-btn" id="musicToggle"><i class="fas fa-music"></i></button>
+
+<img src="https://up6.cc/2026/03/177374065193781.gif" class="logo" alt="شعار">
+
+<h1>إدارة شات سوريا توب</h1>
+
+<div style="text-align:center;margin-bottom:25px;">
+<a href="https://aqfeet.com/" style="color:var(--gold);font-weight:700;text-decoration:none;">
+<i class="fas fa-arrow-left"></i> العوده الى شات سوريا توب
+</a>
+</div>
+
+<nav class="nav-icons">
+
+<a href="net.html"><i class="fas fa-gavel"></i> القوانين</a>
+
+<a href="sh.html"><i class="fas fa-images"></i> صور رمزيات</a>
+
+<a href="ed.html"><i class="fas fa-keyboard"></i> الاختصارات</a>
+
+<a href="z.html"><i class="fas fa-user-shield"></i> الادارة</a>
+</nav>
+<section class="admin">
+<h2><i class="fas fa-book"></i> الإدارة</h2>
+
+<div>
+<span class="toggle-btn"><i class="fas fa-star"></i> مدير الموقع</span>
+<div class="hidden-info">
+<strong>صاحب الموقع</strong> فــادي الــســوري
+</div>
+</div>
+
+<div>
+<span class="toggle-btn"><i class="fas fa-crown"></i> الإداريين</span>
+<div class="hidden-info">
+<strong>الإدارية</strong> تـٌـٌٌــِـِِـِِِـِِـِـآلُاـآ ➢ 𝓽𝓪𝓵𝓪<br>
+<strong>الإداري</strong> الــجــوكــر<br>
+<strong>الإدارية</strong> شــام<br>
+<strong>الإداري</strong> رامــي
+</div>
+</div>
+
+<div>
+<span class="toggle-btn"><i class="fas fa-fire"></i> الأعضاء المميزين</span>
+<div class="hidden-info">
+<strong>العضو المميز</strong> قــريــبــآ<br>
+<strong>العضو المميز</strong> قــريــبــآ<br>
+<strong>العضو المميز</strong> قــريــبــآ<br>
+<strong>العضو المميز</strong> قــريــبــآ<br>
+<strong>العضو المميز</strong> قــريــبــآ<br>
+<strong>العضو المميز</strong> قــريــبــآ<br>
+<strong>العضو المميز</strong> قــريــبــآ<br>
+<strong>العضو المميز</strong> قــريــبــآ
+</div>
+</div>
+</section>
+
+<footer>
+© جميع الحقوق محفوظة شات سوريا توب للجوال 2025–2028
+</footer>
+
+<script>
+/* Theme toggle */
+const themeBtn = document.getElementById("themeToggle");
+const icon = themeBtn.querySelector("i");
+
+// 1. التحقق من التفضيل المحفوظ أو تعيين الوضع الليلي كافتراضي
+// لاحظ أننا نفترض أن "الوضع الطبيعي" لملف الـ CSS هو الليلي، 
+// وأن كلاس "light" هو الذي يحول المتصفح للنهار.
+const currentTheme = localStorage.getItem("theme") || "dark";
+
+if (currentTheme === "light") {
+    document.body.classList.add("light");
+    icon.classList.replace("fa-moon", "fa-sun");
+} else {
+    document.body.classList.remove("light");
+    icon.classList.replace("fa-sun", "fa-moon");
+}
+
+// 2. منطق التبديل عند الضغط
+themeBtn.onclick = () => {
+    document.body.classList.toggle("light");
+    
+    let theme = "dark";
+    if (document.body.classList.contains("light")) {
+        theme = "light";
+        icon.classList.replace("fa-moon", "fa-sun");
+    } else {
+        theme = "dark";
+        icon.classList.replace("fa-sun", "fa-moon");
+    }
+    
+    // حفظ الخيار لكي لا يتغير عند تحديث الصفحة
+    localStorage.setItem("theme", theme);
+};
+
+/* كود الموسيقى يبقى كما هو */
+const musicBtn = document.getElementById("musicToggle");
+const audio = document.getElementById("bgMusic");
+
+musicBtn.onclick = () => {
+    if (audio.paused) {
+        audio.muted = false;
+        audio.play();
+    } else {
+        audio.pause();
+    }
+};
+
+
+
+
+/* Toggle المعلومات المخفية */
+document.querySelectorAll('.toggle-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const info = btn.nextElementSibling;
+    info.classList.toggle('show');
+  });
+});
+
+</script>
+
+</body>
+</html>
