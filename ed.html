@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>اختصارات شات سوريا توب للجوال</title>
+
+<meta name="google" content="notranslate">
+<meta name="HandheldFriendly" content="True">
+
+<meta property="og:description" content="شات سوريا توب للجوال">
+<meta property="og:image" content="https://up6.cc/2026/03/177374065193781.gif">
+
+<link rel="icon" href="https://up6.cc/2026/03/177374065193781.gif">
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#0a0a0a;
+--card:#121212;
+--gold:#ffd700;
+--text:#f5f5f5;
+--shadow:0 4px 14px rgba(255,215,0,.25);
+}
+
+body.light{
+--bg:#ffffff;
+--card:#f2f2f2;
+--gold:#d4af37;
+--text:#222;
+--shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:'Tajawal',sans-serif;
+line-height:1.8;
+padding:18px;
+transition:.4s;
+}
+
+/* الشعار */
+
+.logo{
+width:300px;
+max-width:100%;
+height:auto;
+border-radius:12px;
+border:3px solid var(--gold);
+display:block;
+margin:0 auto 20px;
+animation:float 6s ease-in-out infinite, glowLogo 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-6px)}
+}
+
+@keyframes glowLogo{
+0%{box-shadow:0 0 6px var(--gold)}
+50%{box-shadow:0 0 20px var(--gold)}
+100%{box-shadow:0 0 6px var(--gold)}
+}
+
+/* العنوان */
+
+h1{
+text-align:center;
+color:var(--gold);
+margin-bottom:20px;
+font-size:28px;
+}
+
+/* الأزرار */
+
+.nav-icons{
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
+margin:20px 0 30px;
+}
+
+.nav-icons a{
+background:var(--card);
+padding:10px 20px;
+border-radius:999px;
+color:var(--gold);
+font-weight:700;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:6px;
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+.nav-icons a:hover{
+transform:translateY(-4px);
+box-shadow:0 0 10px var(--gold);
+}
+
+/* القسم */
+
+.rules{
+background:var(--card);
+padding:25px 22px;
+border-radius:14px;
+box-shadow:var(--shadow);
+max-width:700px;
+margin:auto;
+}
+
+.rules h2{
+color:var(--gold);
+margin-bottom:14px;
+font-size:22px;
+text-align:center;
+}
+
+/* الجدول */
+
+.shortcuts-table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+text-align:center;
+}
+
+.shortcuts-table th{
+background:var(--gold);
+color:#ff;
+padding:10px;
+font-size:16px;
+}
+
+.shortcuts-table td{
+padding:10px;
+border-bottom:1px solid rgba(255,215,0,.3);
+font-size:15px;
+}
+
+.shortcuts-table tr:hover{
+background:rgba(255,215,0,.08);
+}
+
+/* لون الوصف */
+
+.shortcuts-table td:last-child{
+color:#ffe066;
+font-weight:bold;
+}
+
+/* صورة الوصف */
+
+.word-img{
+width:22px;
+height:22px;
+margin-left:6px;
+vertical-align:middle;
+}
+
+/* الفوتر */
+
+footer{
+text-align:center;
+margin-top:30px;
+font-size:14px;
+color:var(--gold);
+}
+
+/* الأزرار العائمة */
+
+.theme-btn,.music-btn{
+position:fixed;
+width:46px;
+height:46px;
+border:none;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+z-index:1000;
+}
+
+.theme-btn{
+top:18px;
+right:18px;
+background:var(--gold);
+color:#000;
+}
+
+.music-btn{
+bottom:18px;
+left:18px;
+background:var(--gold);
+color:#000;
+}
+.shortcuts-table td:first-child {
+    
+    color: #E6C200; /* أصفر غامق للنص */
+    font-weight: bold;
+    width: 5%;
+    text-align: center;
+}
+
+.shortcuts-table td:last-child {
+    
+    color: #D4AF37; /* أصفر غامق للنص */
+    font-weight: bold;
+    width: 90%;
+}
+</style>
+</head>
+
+<body class="light">
+
+<button class="theme-btn" id="themeToggle">
+<i class="fas fa-moon"></i>
+</button>
+
+<audio id="bgMusic" autoplay loop muted preload="auto"
+src="https://www.matb3aa.com/music/Abeer-Nehme/Men.Baadak-Abeer.Nehme-MaTb3aa.Com.mp3">
+</audio>
+
+<button class="music-btn" id="musicToggle">
+<i class="fas fa-music"></i>
+</button>
+
+<img src="https://up6.cc/2026/03/177374065193781.gif" class="logo" alt="شعار">
+
+<h1>اختصارات شات سوريا توب للجوال</h1>
+
+<div style="text-align:center;margin-bottom:25px;">
+<a href="https://aqfeet.com/" style="color:var(--gold);font-weight:700;text-decoration:none;">
+<i class="fas fa-arrow-left"></i>
+العودة إلى شات سوريا توب
+</a>
+</div>
+
+<nav class="nav-icons">
+
+<a href="net.html"><i class="fas fa-gavel"></i> القوانين</a>
+
+<a href="sh.html"><i class="fas fa-images"></i> صور رمزيات</a>
+
+<a href="#"><i class="fas fa-keyboard"></i> الاختصارات</a>
+
+<a href="#"><i class="fas fa-user-shield"></i> الادارة</a>
+
+</nav>
+
+<section class="rules">
+
+<h2><i class="fas fa-keyboard"></i> اختصارات الشات</h2>
+
+<table class="shortcuts-table">
+
+<tr>
+<th>الاختصار</th>
+<th>الوصف</th>
+</tr>
+<tr>
+<td>س1/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411100800.gif">
+وعليـكم السـلام عليكم ورحمـة آلله وبركـاتـه..
+</td>
+</tr>
+<tr>
+<td>س2/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411100800.gif">
+وعليـكم السـلام عليكم ورحمـة آلله وبركـاتـه..
+</td>
+</tr>
+<tr>
+<td>س3/</td>
+<td>
+سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ ، أَشْهَدُ أَنْ لا إِلهَ إِلَّا أَنْتَ أَسْتَغْفِرُكَ وَأَتْوبُ إِلَيْكَ
+</td>
+</tr>
+<tr>
+<td>س4/</td>
+<td>
+سِبًحًآنِ آلَلَهّ.. وٌآلَحًمًدٍلَلَهّ.. وٌلَآ آلَهّ آلَآ آلَلَهّ.. وٌآلَلَهّ آکْبًر
+</td>
+</tr>
+<tr>
+<td>و1/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411100800.gif">
+ۆۋۆلڳمـۆۋۆۋۆ
+</td>
+</tr>
+<tr>
+<td>وو/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411137094.gif">
+ولـِــِګـًـِـِ۾  ♪ ᴡᴇʟᴄᴏᴍᴇ
+</td>
+</tr>
+<tr>
+<td>ي1/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411127786.gif">
+يســــلمو .. كلـک ذوووق  ..
+</td>
+</tr>
+<tr>
+<td>ي2/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411127786.gif">
+يســــــلمـگ ربي.. ويســعدڪ
+</td>
+</tr>
+<tr>
+<td>ص1/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411137094.gif">
+صَـبـآحُ الـخـيٌــِر ..
+</td>
+</tr>
+<tr>
+<td>ص2/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411137094.gif">
+صـــِبُأِحّ أَلـْﯞَورّد ..
+</td>
+</tr>
+<tr>
+<td>ص3/</td>
+<td>
+اللهم صلِّ وسلّم وبارك على عبدك ورسولك وحبيبك محمد، وعلى اله وصحبه أجمعين...
+</td>
+</tr>
+<tr>
+<td>ص4/</td>
+<td>
+عَلَيْهِ أَفْضَلُ الصَّلَاةِ وَالسَّلَامِ
+</td>
+</tr>
+<tr>
+<td>م1/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411137094.gif">
+مـَسّـِآء الـخّـيًــر ..
+</td>
+</tr>
+<tr>
+<td>م2/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729411137094.gif">
+مَـــسُأُء أَلَــوّورّد ..
+</td>
+</tr>
+<tr>
+<td>مم/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1604250119159.gif">
+اممممممممممـ
+<img class="word-img" src="https://aqfeet.com/emo/1604250119159.gif">
+</td>
+</tr>
+<tr>
+<td>امم/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1731841254027.gif">
+امممممممم
+<img class="word-img" src="https://aqfeet.com/emo/1731841254027.gif">
+
+</td>
+</tr>
+<tr>
+<td>تف/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1729432135118.gif">
+تـف تـف تـف
+<img class="word-img" src="https://aqfeet.com/emo/1729432135118.gif">
+</td>
+</tr>
+<tr>
+<td>هف/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1730208090889.gif">
+هــَفف  ،  هَـفف  ..
+</td>
+</tr>
+<tr>
+<td>نن/</td>
+<td>
+<img class="word-img" src="https://aqfeet.com/emo/1772470163500.gif">
+ننننننننننننننننننن 
+<img class="word-img" src="https://aqfeet.com/emo/1772470163500.gif">
+ننننننننننننننننننن 
+<img class="word-img" src="https://aqfeet.com/emo/1772470163500.gif">
+</td>
+</tr>
+<tr>
+<td>يب</td>
+<td>
+يــــٓــب
+<img class="word-img" src="https://aqfeet.com/emo/1739294142864.gif">
+
+</td>
+</tr>
+
+</table>
+
+</section>
+
+<footer>
+© جميع الحقوق محفوظة شات سوريا توب للجوال 2025–2028
+</footer>
+
+<script>
+
+const themeBtn=document.getElementById("themeToggle");
+const icon=themeBtn.querySelector("i");
+
+const currentTheme=localStorage.getItem("theme")||"dark";
+
+if(currentTheme==="light"){
+document.body.classList.add("light");
+icon.classList.replace("fa-moon","fa-sun");
+}else{
+document.body.classList.remove("light");
+icon.classList.replace("fa-sun","fa-moon");
+}
+
+themeBtn.onclick=()=>{
+document.body.classList.toggle("light");
+
+let theme="dark";
+
+if(document.body.classList.contains("light")){
+theme="light";
+icon.classList.replace("fa-moon","fa-sun");
+}else{
+icon.classList.replace("fa-sun","fa-moon");
+}
+
+localStorage.setItem("theme",theme);
+};
+
+const musicBtn=document.getElementById("musicToggle");
+const audio=document.getElementById("bgMusic");
+
+musicBtn.onclick=()=>{
+if(audio.paused){
+audio.muted=false;
+audio.play();
+}else{
+audio.pause();
+}
+};
+
+</script>
+
+</body>
+</html>
